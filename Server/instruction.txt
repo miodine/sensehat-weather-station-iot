@@ -1,0 +1,33 @@
+NOTE: I WILL SEND YOU THE ENTIRE RASPBERRY PI VM IMAGE, THIS THING IS FOR SETUP ONLY, IF YOU'D LIKE TO PROTOTYPE YOUR CODE, AND 
+NOT WORK ON THE REAL DATA - JUST DO THE POINTS 0. AND 1. FOR NOW! 
+
+0. Do a backup of all the laboratory trash files that u might have in /home/pi/server/, then clean the folder xD
+1. Place the folder 'IoT_scripts' in /home/pi/, and copy the contents of the 'server' folder into already existent /home/pi/server. 
+See attached .png file to make sure that it looks like it should. Then you can access the resources with your usual VM IP, and reference
+those directly xD
+
+
+but if you want them to change, and u want that led matrix php script to work... 
+
+2. Setting up the server script accessibility (the most painful part)
+
+ Navigate to /home/pi/ directory in the terminal, then type:
+chmod 777 -R IoT_scripts/
+chmod 777 -R server/
+
+in 'server' directory go:
+chmod +x led_matrix.php
+(and on that other one, with class - do it as well) 
+in 'IoT_scripts' directory, go:
+chmod +x update_measurements.py
+(and other python files as well, if this wouldn't work for some reason)
+
+NOTE: During the execution of either scripts - there also might be an error that some folder is not accessible - you'll get the path to the folder in the error,
+just go 'chmod 777 -R /path/to/folder' on that folder.
+
+You should have apropriate entry in the sudoers.d folder marked already, but if not - check the `other` attached image and make 
+sure that the contents of the apropriate files are the same as presented (like with vim or regular notpad - check the commands)
+
+3. Run the 'update_measurements.py' scripts, either with ./update_measurements.py or python3 update_measurements.py
+4. ???
+5. Profit.  
