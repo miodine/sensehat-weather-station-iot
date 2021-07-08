@@ -36,13 +36,5 @@
         android:text="         Ram Ellanki - 139783\n     Keshav Sharma - 142862\nEwelina Robakowska - 140360\n     Pawel Rozenblut - 140361"
         android:textColor="@color/white"
         android:textSize="20sp"></TextView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:paddingRight="20dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="\n\n\nDesigned By Ram Ellanki"
-        android:textColor="@color/white"
-        android:textSize="15sp"></TextView>
+    
 </LinearLayout>
