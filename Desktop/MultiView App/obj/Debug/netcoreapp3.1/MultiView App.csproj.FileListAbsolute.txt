@@ -99,3 +99,47 @@ C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.
 C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.dll
 C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.pdb
 C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.genruntimeconfig.cache
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\Icons\icons8-four-squares-100.png
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\Icons\icons8-graph-96.png
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\Icons\icons8-list-96.png
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\Icons\icons8-settings-100.png
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.exe
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.dll.config
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.deps.json
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.runtimeconfig.json
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.runtimeconfig.dev.json
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.dll
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.pdb
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\ControlzEx.dll
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\MahApps.Metro.dll
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\OxyPlot.dll
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\OxyPlot.Wpf.dll
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\bin\Debug\netcoreapp3.1\de\MahApps.Metro.resources.dll
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.csproj.AssemblyReference.cache
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\View\MainWindow.g.cs
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\View\View1.g.cs
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\View\View2.g.cs
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\View\View3.g.cs
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\View\View4.g.cs
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\App.g.cs
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\MultiView App_Content.g.cs
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\MultiView App_MarkupCompile.cache
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\MultiView App_MarkupCompile.lref
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\App.baml
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\View\MainWindow.baml
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\View\View1.baml
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\View\View2.baml
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\View\View3.baml
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\View\View4.baml
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.g.resources
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.AssemblyInfoInputs.cache
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.AssemblyInfo.cs
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.csproj.CoreCompileInputs.cache
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.csproj.CopyComplete
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.dll
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.pdb
+D:\GITHUB_work\IoT_final_project\Desktop\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.genruntimeconfig.cache
