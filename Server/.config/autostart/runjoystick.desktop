@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=<GUI Controller>
+Comment= 
+Exec= /home/pi/IoT_scripts/joystick_counters.py
+StartupNotify=false
+Terminal= true
+Hidden= false

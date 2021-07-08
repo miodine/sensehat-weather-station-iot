@@ -17,6 +17,7 @@ class NonBlockingTimer:
 	def evaluate_elapsed(self, callback): 
 		self._t2 = dt.now()
 		self._current_dt_time = self._t2 - self._t1
+		
 		self._current_dt_int = int(self._current_dt_time.total_seconds()*1000) 
 		if(self._current_dt_int < self._dt):
 			return
