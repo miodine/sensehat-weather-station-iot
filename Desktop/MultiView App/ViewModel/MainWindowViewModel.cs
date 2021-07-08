@@ -36,12 +36,12 @@ namespace MultiViewApp.ViewModel
             MenuCommandView2 = new ButtonCommand(MenuSetView2);
             MenuCommandView3 = new ButtonCommand(MenuSetView3);
             MenuCommandView4 = new ButtonCommand(MenuSetView4);
-            ContentViewModel = new View1_ViewModel(); // View1_ViewModel.Instance
+            ContentViewModel = new View1_ViewModel(); //<- View1_ViewModel.Instance
         }
 
         private void MenuSetView1()
         {
-            ContentViewModel = new View1_ViewModel(); // View1_ViewModel.Instance
+            ContentViewModel = new View1_ViewModel(); //<- View1_ViewModel.Instance
         }
 
         private void MenuSetView2()
@@ -53,11 +53,11 @@ namespace MultiViewApp.ViewModel
 
             Action<string, Color> xxDD;
 
-            ContentViewModel = new View2_ViewModel(); // View1_ViewModel.Instance
+            ContentViewModel = new View2_ViewModel(); //<- View2_ViewModel.Instance
         }
         private void MenuSetView3()
         {
-            ContentViewModel = new View3_ViewModel(); // View1_ViewModel.Instance
+            ContentViewModel = new View3_ViewModel(); //<- View3_ViewModel.Instance
             
         }
         private void MenuSetView4()
@@ -68,7 +68,7 @@ namespace MultiViewApp.ViewModel
             xD.B = 0;
             Action<string, Color> xxDD;
 
-            ContentViewModel = new View4_ViewModel(); // View1_ViewModel.Instance
+            ContentViewModel = new View4_ViewModel(); //<- View4_ViewModel.Instance
         }
     }
 }

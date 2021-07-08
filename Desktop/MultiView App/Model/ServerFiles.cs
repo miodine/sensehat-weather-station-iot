@@ -1,11 +1,13 @@
 ﻿namespace MultiViewApp.Model
 {
     /**
-     * @brief Files paths 
+     * class ServerFiles: stores files paths for obtaining data from the server
      */
     class ServerFiles
     {
-
+        /**
+         * @brief: Constructor initializes all the file paths
+         */
         public ServerFiles()
         {
             ledDisplay = "/led_display.php";
@@ -44,6 +46,7 @@
             joystickY = "/measurements/joy_counter_y_click_pos.json";
         }
 
+        #region Fields File Paths
         public string ledDisplay { get; }
         public string rollDeg { get; }
         public string pitchDeg { get; }
@@ -78,5 +81,6 @@
         public string joystickC { get; }
         public string joystickX { get; }
         public string joystickY { get; }
+        #endregion
     }
 }

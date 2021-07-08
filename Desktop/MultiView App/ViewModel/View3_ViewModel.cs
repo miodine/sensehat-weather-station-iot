@@ -67,23 +67,22 @@ namespace MultiViewApp.ViewModel
         #endregion
 
         #region Fields
-        private Timer RequestTimer;
-        private IoTServer Server;
+        private Timer RequestTimer; //<- Timer controlled by Stop, Start buttons
+        private IoTServer Server;   //<- Server
         // list nr of sample -> its time
         private List<double> sampleCounter = new List<double>();
-        // max value on x axis
+        // max no of values on x, y axis
         private int xAxisMax = 20;
         private int yAxisMax = 1;
-        private int yAxisMin = 0;
-        private int maxNoDataSeries = 12;
-        // for storing data to be showed on the graph
-        private ServerFiles serverFiles;
-        List<MeasurementModel> chartData;
-        bool isButtonStop = false;
+        private int yAxisMin = 0;      
+        private int maxNoDataSeries = 12; //<- max no of data series
+        private ServerFiles serverFiles;  //<- files paths
+        List<MeasurementModel> chartData; //<- list for storing data from the server
+        bool isButtonStop = false;        //<- bool value shows state of Stop button
         #endregion
 
         #region Checkboxes fields
-        /* variables storing info about checkboxes states */
+        // variables storing info about checkboxes states 
         private bool rollDeg;
         private bool rollRad;
         private bool pitchDeg;
@@ -138,24 +137,23 @@ namespace MultiViewApp.ViewModel
             DataPlotModel.Series.Add(new LineSeries() { Color = OxyColor.Parse("#FFff4d4d") });
             DataPlotModel.Series.Add(new LineSeries() { Color = OxyColor.Parse("#FFcc33ff") });
 
+            // Buttons commands
             StartButton = new ButtonCommand(StartTimer);
             StopButton = new ButtonCommand(StopTimer);
             serverFiles = new ServerFiles();
+            // Obtain set values for the server
             ipAddress = MultiViewApp.Properties.Settings.Default.IPaddress;
             sampleTime = Int32.Parse(MultiViewApp.Properties.Settings.Default.SampleTime);
-
+            // Create a server
             Server = new IoTServer(IpAddress);
             // list storing data from server
             chartData = new List<MeasurementModel>();
             CreateEmptyList(ref chartData);
-
-
-
         }
 
 
         /**
-          *
+          *@brief: Updates information about numebr of visible samples and their time of occurence
           *
           */
         private void UpdateSampleList()
@@ -184,22 +182,17 @@ namespace MultiViewApp.ViewModel
           */
         private void UpdatePlot(double t)
         {
-            // data series for RPY values
-            //LineSeries rollSeries = DataPlotModel.Series[0] as LineSeries ;
-            //LineSeries pitchSeries = DataPlotModel.Series[1] as LineSeries;
-            //LineSeries yawSeries = DataPlotModel.Series[2] as LineSeries;
-            //DataPlotModel.Series.Add(new LineSeries() { Title = "roll", Color = OxyColor.Parse("#FFFF0000") });
 
             for (int i = 0; i < maxNoDataSeries; i++)
-            {
-                
+            {               
                 try
-                {
-                    
+                {                    
                     if (chartData[i].name != null && !isButtonStop)
                     {
+                        // Add information about obtained data
                         (DataPlotModel.Series[i] as LineSeries).Points.Add(new DataPoint(t, chartData[i].value));
                         (DataPlotModel.Series[i] as LineSeries).Title = chartData[i].name + " [" + chartData[i].unit + "]";
+                        // Adjust graph y axis
                         if (DataPlotModel.Axes[1].Maximum <= chartData[i].value)
                         {
                             DataPlotModel.Axes[1].Maximum = chartData[i].value + chartData[i].value * 0.3;
@@ -207,20 +200,17 @@ namespace MultiViewApp.ViewModel
                         else if (DataPlotModel.Axes[1].Minimum >= chartData[i].value)
                         {
                             DataPlotModel.Axes[1].Minimum =- DataPlotModel.Axes[1].Maximum * 0.3;
-                        }
-                        
+                        }                       
                     }
                 }
                 catch (Exception e)
                 {
                     Debug.WriteLine("ADD DATA PLOT ERROR");
                     Debug.WriteLine(e);
-
                 }
                                                 
             }
-
-            // xAxisMax = 20
+            // Adjust x axis
             if (t > xAxisMax && !isButtonStop)
             {
                 try
@@ -231,7 +221,6 @@ namespace MultiViewApp.ViewModel
                     DataPlotModel.Axes[0].Minimum = t - xAxisMax;
                     // new max value of x axis
                     DataPlotModel.Axes[0].Maximum = t;
-
                     // RemoveRange( start, count )
                     for (int i = 0; i < maxNoDataSeries; i++)
                     {
@@ -242,23 +231,19 @@ namespace MultiViewApp.ViewModel
                     }
                     // update list too
                     sampleCounter.RemoveRange(0, indexDelete);
-
-
                 }
                 catch (Exception e)
                 {
                     Debug.WriteLine("ADD DATA PLOT 222 ERROR");
                     Debug.WriteLine(e);
-                }
-
-
-                
-
+                }             
             }
-
             DataPlotModel.InvalidatePlot(true);
         }
-
+        /**
+         * @brief: Modified funciton for deserializing data obtained from the server
+         * @return: MeasurementModel data
+         */
         private MeasurementModel Deserialize(string _responseText)
         {
             try
@@ -280,6 +265,9 @@ namespace MultiViewApp.ViewModel
             }
 
         }
+        /**
+         * @brief: Creates a List<MeasurementModel> of a given size
+         */
         private void CreateEmptyList(ref List<MeasurementModel> _list)
         {
             MeasurementModel _model = new MeasurementModel();
@@ -288,8 +276,6 @@ namespace MultiViewApp.ViewModel
                 _list.Add(_model);
             }
         }
-
-
         /**
           * @brief Asynchronous chart update procedure with
           *        data obtained from IoT server responses.

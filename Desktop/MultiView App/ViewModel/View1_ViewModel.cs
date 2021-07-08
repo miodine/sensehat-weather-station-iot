@@ -12,16 +12,17 @@ namespace MultiViewApp.ViewModel
     using Model;
     class View1_ViewModel : BaseViewModel
     {
+        #region Properties
         public ButtonCommand SaveButtonCommand { get; set; }
         public ButtonCommand LoadButtonCommand { get; set; }
-        
-        private string _setting_1 = "192.168.56.15"; // Server IP
-        private string _setting_2 = "500"; // Sample Time for the chart 
-        private string _setting_3 = "5"; // xAxisMax max no samples seen on the chart
-        private string _setting_4 = "1000"; // Dynamic List refreshment time period ListTime
+        #endregion
+        #region Fields
+        private string _setting_1 = "192.168.56.15"; //<- Server IP
+        private string _setting_2 = "500";           //<- Sample Time for the chart 
+        private string _setting_3 = "5";             //<- xAxisMax max time seen on the chart
 
-        private readonly int minSampleTime = 100;
-
+        private readonly int minSampleTime = 100;    //<- min sample time 
+        #endregion
 
         /**
          * @brief Load user setting to default setting (modified in each session)
@@ -32,7 +33,6 @@ namespace MultiViewApp.ViewModel
             Setting_1 = Properties.Settings.Default.IPaddress;
             Setting_2 = Properties.Settings.Default.SampleTime;
             Setting_3 = Properties.Settings.Default.xAxisMax;
-            Setting_4 = Properties.Settings.Default.ListTime;
         }
         /**
          * @brief Save user setting from default setting (modified in each session)
@@ -47,10 +47,9 @@ namespace MultiViewApp.ViewModel
             }
             Properties.Settings.Default.IPaddress = Setting_1;           
             Properties.Settings.Default.xAxisMax = Setting_3;
-            Properties.Settings.Default.ListTime = Setting_4;
         }
-        
 
+        #region Public methods 
         public string Setting_1
         {
             get { return _setting_1; }
@@ -89,19 +88,7 @@ namespace MultiViewApp.ViewModel
                 }
             }
         }
-
-        public string Setting_4
-        {
-            get { return _setting_4; }
-            set
-            {
-                if (_setting_4 != value)
-                {
-                    _setting_4 = value;
-                    OnPropertyChanged("Setting_4");
-                }
-            }
-        }
+        #endregion
 
         public View1_ViewModel()
         {
@@ -109,19 +96,17 @@ namespace MultiViewApp.ViewModel
             LoadButtonCommand = new ButtonCommand(LoadButtonClickHandler);
         }
 
+        #region Button Click Handlers
         public void SaveButtonClickHandler()
         {
-            //saveToFile(filePath);
             saveDefaultSettings();
-
-
             if (1 != 2) return;
         }
         public void LoadButtonClickHandler()
         {
-            //readFromFile(filePath);
             loadDefaultSettings();
             if (1 != 2) return;
         }
+        #endregion
     }
 }

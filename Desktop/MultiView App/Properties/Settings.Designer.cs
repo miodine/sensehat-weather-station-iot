@@ -58,17 +58,5 @@ namespace MultiViewApp.Properties {
                 this["xAxisMax"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
-        public string ListTime {
-            get {
-                return ((string)(this["ListTime"]));
-            }
-            set {
-                this["ListTime"] = value;
-            }
-        }
     }
 }

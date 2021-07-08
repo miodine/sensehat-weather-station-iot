@@ -139,37 +139,37 @@ namespace MultiViewApp.ViewModel
 
         public View4_ViewModel(Action<String, Color> handler)
         {
-            /* Initializing default values for the LED display */
+            // Initializing default values for the LED display 
             ledDisplay = new LedDisplay(0x00000000);
             SelectedColor = new SolidColorBrush(ledDisplay.ActiveColor);
             setColorHandler = handler;
-            /* Initialziing buttons */
+            // Initialziing buttons 
             CommonButtonCommand = new ButtonCommandWithParameter(SetButtonColor);
             SendRequestCommand = new ButtonCommand(SendControlRequest);
             SendClearCommand = new ButtonCommand(ClearDisplay);
-            /* Creating a server and setting IP address, file path */
+            // Creating a server and setting IP address, file path 
             serverFiles = new ServerFiles();
             ipAddress = MultiViewApp.Properties.Settings.Default.IPaddress;
             server = new IoTServer(IpAddress);
             server.setFilePath(serverFiles.ledDisplay);            
-            /* Message to be displayd */
+            // Message to be displayd 
             Monit = "LED display control panel initialised!";
         }
 
         public View4_ViewModel()
         {
-            /* Initializing default values for the LED display and buttons*/
+            // Initializing default values for the LED display and buttons
             ledDisplay = new LedDisplay(0x00000000);
             SelectedColor = new SolidColorBrush(ledDisplay.ActiveColor);
             CommonButtonCommand = new ButtonCommandWithParameter(SetButtonColor);
             SendRequestCommand = new ButtonCommand(SendControlRequest);
             SendClearCommand = new ButtonCommand(ClearDisplay);
-            /* Setting IP address, file path */
+            // Setting IP address, file path 
             serverFiles = new ServerFiles();
             ipAddress = MultiViewApp.Properties.Settings.Default.IPaddress;
             server = new IoTServer(IpAddress);
             server.setFilePath(serverFiles.ledDisplay);
-            /* Message to be displayd */
+            // Message to be displayd 
             Monit = "LED display control panel initialised!";
         }
 

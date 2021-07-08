@@ -14,6 +14,7 @@ namespace MultiViewApp.ViewModel
 
     public class View2_ViewModel : BaseViewModel, INotifyPropertyChanged
     {
+        #region Properties
         public ObservableCollection<MeasurementViewModel> Measurements { get; set; }
         public ButtonCommand Refresh { get; set; }
         private string ipAddress;
@@ -32,9 +33,8 @@ namespace MultiViewApp.ViewModel
                 }
             }
         }
-
-
-        private ServerIoTmock ServerMock = new ServerIoTmock();
+        #endregion
+        #region Fields
         private IoTServer Server;
         private ServerFiles serverFiles;
 
@@ -43,37 +43,21 @@ namespace MultiViewApp.ViewModel
 
         private string responseText;
         private MeasurementModel responseJson;
-        int counter = 0;
-        bool first;
 
         private List<MeasurementModel> measurementList;
+        #endregion
 
         public View2_ViewModel()
         {
             // Create new collection for measurements data
             Measurements = new ObservableCollection<MeasurementViewModel>();
-            sampleTime = 4000;
             // Bind button with action
             Refresh = new ButtonCommand(GetServerResponse);
-
+            // Create a member with all file paths for obtaing data
             serverFiles = new ServerFiles();
+            // Create a server and set specified IP address
             ipAddress = MultiViewApp.Properties.Settings.Default.IPaddress;
             Server = new IoTServer(IpAddress);
-            measurementList = new List<MeasurementModel>();
-            first = true;
-        }
-
-        private void addMeasurement() 
-        {
-            if (!first)
-            {
-                Measurements[counter] = new MeasurementViewModel(responseJson);                               
-            }
-            else
-            {
-                Measurements.Add(new MeasurementViewModel(responseJson));
-            }
-            counter++;
         }
         /**
           * @brief Asynchronous chart update procedure with
@@ -82,8 +66,13 @@ namespace MultiViewApp.ViewModel
           */
         private async void GetServerResponse()
         {
+            // Clear previous measurements 
             Measurements.Clear();
+            // Disable Refresh button until the data is obtained
             Refresh.IsEnabled = false;
+
+            // The data is being obtained one by one (from independent files)
+            // The process: set new file path -> wait for server reponse -> deserialize the response -> add data to Measurements list
 #if CLIENT
 #if GET
             Server.setFilePath(serverFiles.rollDeg);
@@ -237,6 +226,7 @@ namespace MultiViewApp.ViewModel
             string responseText = await Server.POSTwithRequest();
 #endif
 #endif
+            // Enable again Refresh button
             Refresh.IsEnabled = true;
         }
 

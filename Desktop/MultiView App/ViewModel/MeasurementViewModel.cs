@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 namespace MultiViewApp.ViewModel
 {
     using Model;
-
+    /**
+     * MeasurementViewModel class
+     * @brief: methods used for binding MeasurementModel data with proper fields in the View2.xaml file
+     */
     public class MeasurementViewModel : INotifyPropertyChanged
     {
         private string _name;

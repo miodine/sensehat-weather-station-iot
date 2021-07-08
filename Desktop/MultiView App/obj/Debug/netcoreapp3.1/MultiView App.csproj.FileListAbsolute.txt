@@ -56,3 +56,46 @@ C:\Users\mam6p\Desktop\Semestr VI\ECII\Laboratory\10. Desktop app\solutions\Mult
 C:\Users\mam6p\Desktop\Semestr VI\ECII\Laboratory\10. Desktop app\solutions\MultiView App\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.dll
 C:\Users\mam6p\Desktop\Semestr VI\ECII\Laboratory\10. Desktop app\solutions\MultiView App\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.pdb
 C:\Users\mam6p\Desktop\Semestr VI\ECII\Laboratory\10. Desktop app\solutions\MultiView App\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.genruntimeconfig.cache
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\Icons\icons8-four-squares-100.png
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\Icons\icons8-graph-96.png
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\Icons\icons8-list-96.png
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\Icons\icons8-settings-100.png
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.exe
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.dll.config
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.deps.json
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.runtimeconfig.json
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.runtimeconfig.dev.json
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.dll
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\MultiView App.pdb
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\ControlzEx.dll
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\MahApps.Metro.dll
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\OxyPlot.dll
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\OxyPlot.Wpf.dll
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\bin\Debug\netcoreapp3.1\de\MahApps.Metro.resources.dll
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\View\MainWindow.g.cs
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\View\View1.g.cs
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\View\View2.g.cs
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\View\View3.g.cs
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\View\View4.g.cs
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App_Content.g.cs
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App_MarkupCompile.cache
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App_MarkupCompile.lref
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\App.baml
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\View\MainWindow.baml
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\View\View1.baml
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\View\View2.baml
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\View\View3.baml
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\View\View4.baml
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.g.resources
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.AssemblyInfoInputs.cache
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.AssemblyInfo.cs
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.csproj.CoreCompileInputs.cache
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.csproj.CopyComplete
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.dll
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.pdb
+C:\Users\Ewelina\Desktop\MultiViewApp_final\MultiView App\obj\Debug\netcoreapp3.1\MultiView App.genruntimeconfig.cache
