@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<!-- HTML file head: web page metadata -->
+	<head>
+		<title>Data</title>
+		<!-- jQuery -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		
+		<!-- Chart.js library -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		
+		<script type="text/javascript" src="scripts/chart.js"></script> 
+     
+        <link rel="stylesheet" type="text/css" href="styles/chart.css">
+		
+	</head>
+
+	<!-- HTML file body: web page content -->
+<body>
+		<h1 class="text-center">Chart</h1>
+       
+     
+       
+      
+   
+       
+			
+             <div class="text-center" >
+                              <select id= "chartName" >
+                                <option value="1">Temperature</option>
+                                <option value="2">Pressure</option>
+                                <option value="3">Humidity</option>
+                                <option value="4">Orientation</option>
+                                <option value="5">Accelerometer</option>
+                                <option value="6">Gyroscope</option>
+                              </select>
+                           
+                            
+            
+                              <select id= "unit" >
+                                <option id= "unit1" value="0">C</option>
+                                <option id= "unit2" value="1">F</option>
+                              </select>
+            
+            <br> <br>
+            <button  type="button" style="background-color:#2c344e;  color:white" onclick="selectChart()">Generate Chart</button><br>
+              
+
+            
+             
+             </div><br>
+           
+        <div id="datagrabber" class="container border border-primary rounded datagrabber">
+       
+       
+			<div class="chartcontainer">
+				<canvas id="Chart"></canvas>
+			</div>
+		</div><br>
+          <div class="center">  
+          <ul class="nav">
+				
+				<li><div class="border border-primary rounded menuitem"><span>Max. number of samples: <span id="samplenumber"></span></span></div></li>
+                <li><div class="border border-primary rounded menuitem"><span>Sample Time[ms]: <span id="sampletime"></span></span></div></li>
+                <li><div class="border border-primary rounded menuitem"><span>Server IP: <span id="ServerIP"></span></span></div></li> &nbsp;
+                
+                <li><button id="start" type="button" style="background-color:#2c344e;  color:white">Start</button></li>&nbsp;
+  				<li><button id="stop" type="button" style="background-color:#2c344e;  color:white">Stop</button></li>
+			</ul>
+          </div>
+         
+        
+	</body>
+
+</html>

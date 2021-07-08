@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SenseHAT LED Matrix Control</title>
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+		
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+	<!-- Our Custom CSS -->
+	
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+    <script type="text/javascript" src="scripts/led_matrix.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/led.css">
+
+</head>
+
+<body>
+	<h2>LED Matrix Controler</h2>
+    <h6 id="monit_">Monit: Module initialised!</h6>
+    <div id="matrix_">
+
+        <script type='text/javascript'>generateMatrix()</script>
+
+    </div>
+
+
+    <div class="slidecontainer">
+        R:
+        <input type="range" min="0" max="255" value="1" class="slider" id="R_range" oninput="slider_in()">
+    </div>
+    <div class="slidecontainer">
+        G:
+        <input type="range" min="0" max="255" value="1" class="slider" id="G_range" oninput="slider_in()">
+    </div>
+    <div class="slidecontainer">
+        B:
+        <input type="range" min="0" max="255" value="1" class="slider" id="B_range" oninput="slider_in()">
+    </div>
+
+
+    <p>Result:</p>
+    <table>
+        <tr>
+            <td><button id="reference" type="button" class="btn btn-primary btncustom"></button></td>
+            <td><button id="submit" type="button" style="background-color:#2c344e; color:white" 
+                    onclick="submitMatrixState()">SUBMIT</button></td>
+            <td><button id="clear" type="button" style="background-color:#2c344e; color:white" 
+                    >CLEAR</button></td>
+            
+        </tr>
+    </table>
+
+
+
+
+
+</body>
+
+
+</html>

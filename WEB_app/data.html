@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HTML file head: web page metadata -->
+    <head>
+        <title>Orientation data table</title>
+        <!-- jQuery -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript" src="scripts/data.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/rpi.css">
+    </head>
+
+	<!-- HTML file body: web page content -->
+	<body>
+        
+       <div class="center2"><ul class="nav">
+      
+   
+				
+				<li><div class="border border-primary rounded menuitem"><span>Max. number of samples: <span id="samplenumber"></span></span></div></li>&nbsp;
+                <li><div class="border border-primary rounded menuitem"><span>Sample Time[ms]: <span id="sampletime"></span></span></div></li>&nbsp;
+                <li><div class="border border-primary rounded menuitem"><span>Server IP: <span id="ServerIP"></span></span></div></li> &nbsp;
+                
+		
+    
+       
+				
+				
+			</ul>
+        </div>
+        </br>
+        <div class="text-center">
+        <button id="start" type="button" style="background-color:#2c344e;  color:white" onclick="startTimer()">Start</button>&nbsp;
+        <button id="stop" type="button" style="background-color:#2c344e;  color:white" onclick="stopTimer()">Stop</button>
+        </div><br>
+		<div>
+        <div>    
+            <table class="center3">
+			<thead>
+           
+                <tr>
+                <th class="text-center"  style="color:#ECF0F1"><h4>Joystick Data</h4></th>
+                  
+                  
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                   
+                 
+                    <td>
+                        <table class="center2">
+                            <thead>
+                                <tr>
+                                    <th style="color:#ECF0F1">Name</th>
+                                    <th style="color:#ECF0F1">Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="JXName">X</td>
+                                    <td id="JXValue">0</td>
+                                </tr>
+                                <tr>
+                                    <td id="JYName">Y</td>
+                                    <td id="JYValue">0</td>
+                                </tr>
+                                <tr>
+                                    <td id="JZName">Counter</td>
+                                    <td id="JZValue">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                 
+                </tr>
+                
+            </tbody>
+		</table>
+		</div></br>
+    </br>
+		<table class="center">
+			<thead>
+             <tr>
+        <th>&nbsp;</th>
+        <th><h4 class="text-center" style="color:#ECF0F1">Weather Data</h4></th>
+        <th>&nbsp;</th>
+        </tr>
+        <tr>
+        <th><h5 class="text-center">Name</h5></th>
+                    <th><h5 class="text-center">Value</h5></th>
+                    <th> <h5 class="text-center">Unit</h5> </th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                    <td>Temperature from Humidity sensor</td>
+                    <td id="tempFromHumValue" class="text-center">0</td>
+                    <td>
+                           <div  class="text-center" style="width:150px;">
+                              <select id="Temp_H" class="text-center">
+                            
+                                <option value="1">&deg;C</option>
+                               
+                                <option value="2">&deg;F</option>
+                              </select>
+                            </div>
+                    </div></td>
+                </tr>
+                <tr>
+                    <td>Temperature from Pressure sensor</td>
+                    <td id="tempFromPresValue" class="text-center">0</td>
+                    <td>
+                           <div class="text-center" style="width:150px;">
+                              <select id="Temp_P" class="text-center">
+                                
+                                <option value="1">&deg;C</option>
+                              
+                                <option value="2">&deg;F</option>
+                              </select>
+                            </div>
+                    </div></td>
+                </tr>
+                <tr>
+                  <td>Pressure</td>
+                  <td id="presValue" class="text-center">0</td>
+                  <td>
+                           <div class="text-center" style="width:150px;">
+                              <select id="press" class="text-center">
+                               
+                                <option value="1">hPa</option>
+                                <option value="2">mmHg</option>
+                                
+                              </select>
+                            </div>
+                  </div></td>
+                </tr>
+                <tr>
+                  <td>Humidity</td>
+                  <td id="humValue" class="text-center">0</td>
+                  <td>
+                           <div class="text-center" style="width:150px;">
+                              <select class="text-center" id="hum">
+                               
+                                <option value="1">%</option>
+                                <option value="2">[-]</option>
+                           </select>
+                            </div>
+                  </div></td>
+                </tr>
+    </thead>
+    </table>    </br>
+    </br>
+    </div>   
+            <div>    
+            <table class="center2">
+			<thead>
+            <tr>
+                <th colspan="4" class="text-center"  style="color:#ECF0F1"><h4>IMU Data</h4></th>
+            <th></th>
+                <th></th>
+                 <th></th>
+            </tr>
+                <tr>
+                <th class="text-center"  >Orientation</th>
+                  <th class="text-center"  >Accelerometer</th>
+                  <th  class="text-center" >Magnetometer</th>
+                  <th class="text-center"  >Gyroscope</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>
+                           <div class="text-center" style="width:150px;">
+                              <select id="orientation">
+                                
+                                <option value="1">Deg</option>
+                                <option value="2">Rad</option>
+                           </select>
+                            </div>
+                    </td>
+                    <td>
+                           <div class="text-center" style="width:150px;">
+                              <select  id="acc">
+                                
+                                <option value="1">Deg</option>
+                                <option value="2">Rad</option>
+                           </select>
+                            </div>
+                  </td>
+                         <td>
+                           <div class="text-center" style="width:150px;">
+                              <select>
+                                
+                                <option value="1">&mu;T</option>
+                           </select>
+                            </div>
+                  </td>
+                    <td>
+                     <div class="text-center" style="width:270px;">
+                              <select  id="gyro">
+                               
+                                <option value="1">Deg</option>
+                                <option value="2">Rad</option>
+                           </select>
+                            </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="center2">
+                            <thead>
+                                <tr>
+                                    <th style="color:#ECF0F1">Name</th>
+                                    <th style="color:#ECF0F1">Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="OXName">Roll</td>
+                                    <td id="OXValue">0</td>
+                                </tr>
+                                <tr>
+                                    <td id="OYName">Pitch</td>
+                                    <td id="OYValue">0</td>
+                                </tr>
+                                <tr>
+                                    <td id="OZName">Yaw</td>
+                                    <td id="OZValue">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    
+                    <td>
+                        <table class="center2">
+                            <thead>
+                                <tr>
+                                    <th style="color:#ECF0F1">Name</th>
+                                    <th style="color:#ECF0F1">Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="AXName">Roll</td>
+                                    <td id="AXValue">0</td>
+                                </tr>
+                                <tr>
+                                    <td id="AYName">Pitch</td>
+                                    <td id="AYValue">0</td>
+                                </tr>
+                                <tr>
+                                    <td id="AZName">Yaw</td>
+                                    <td id="AZValue">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>
+                        <table class="center2">
+                            <thead>
+                                <tr>
+                                    <th style="color:#ECF0F1">Name</th>
+                                    <th style="color:#ECF0F1">Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="MXName">X</td>
+                                    <td id="MXValue">0</td>
+                                </tr>
+                                <tr>
+                                    <td id="MYName">Y</td>
+                                    <td id="MYValue">0</td>
+                                </tr>
+                                <tr>
+                                    <td id="MZName">Z</td>
+                                    <td id="MZValue">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>
+                        <table class="center2">
+                            <thead>
+                                <tr>
+                                    <th style="color:#ECF0F1">Name</th>
+                                    <th style="color:#ECF0F1">Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="GXName">X</td>
+                                    <td id="GXValue">0</td>
+                                </tr>
+                                <tr>
+                                    <td id="GYName">Y</td>
+                                    <td id="GYValue">0</td>
+                                </tr>
+                                <tr>
+                                    <td id="GZName">Z</td>
+                                    <td id="GZValue">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                
+            </tbody>
+		</table>
+		</div>
+	</body>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<!-- HTML file head: web page metadata -->
+	<head>
+		<title>Configuration</title>
+		<!-- jQuery -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+		
+		<!-- Our Custom CSS -->
+		<link rel="stylesheet" href="styles/config_css.css">
+		
+		
+		<script type="text/javascript" src="scripts/config_JS.js"></script>
+	</head>
+
+	<!-- HTML file body: web page content -->
+	<body>
+		<h2>Configuration</h2>
+		<br>
+
+
+		<table>
+		<tr>
+			<td> <label>Server IP : </label></td>
+			<td> <input id="ServerIP" type="text" size="25"></input> </td>
+		</tr>
+
+		
+	
+		<tr>
+			<td> <label>Sample Time[ms]: </label> </td>
+			<td> <input id="sample_time" type="text" size="25"></input> </td>
+		</tr>	
+
+		<tr>
+			<td> <label>Max no of samples: </label> </td>
+			<td> <input id="max_samples" type="text" size="25"></input> </td>
+		</tr>
+
+
+		</table>
+
+
+		<br><br>
+		<ul class="nav">
+				<li><button id="save" type="button" style="background-color:#2c344e;  color:white">SAVE SETTINGS</button></li> &nbsp;
+				<li><button id="load" type="button" style="background-color:#2c344e;  color:white">LOAD SETTINGS</button></li>
+				
+		</ul>
+        <br>
+		<div id="out">
+			<b>Server response:</b>
+			<br>
+			<output id="response"></output>
+			<br><br>
+		</div>
+		
+	</body>
+
+</html>
