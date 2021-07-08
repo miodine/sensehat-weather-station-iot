@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/blue"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Internet of Things"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-black"> </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Group - 1"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"> </TextView>
+
+    <ImageView
+        android:id="@+id/splashscreen"
+        android:layout_width="344dp"
+        android:layout_height="380dp"
+        android:layout_gravity="center"
+        android:src="@drawable/splash" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:fontFamily="sans-serif-light"
+        android:text="         Ram Ellanki - 139783\n     Keshav Sharma - 142862\nEwelina Robakowska - 140360\n     Pawel Rozenblut - 140361"
+        android:textColor="@color/white"
+        android:textSize="20sp"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingRight="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="\n\n\nDesigned By Ram Ellanki"
+        android:textColor="@color/white"
+        android:textSize="15sp"></TextView>
+</LinearLayout>
