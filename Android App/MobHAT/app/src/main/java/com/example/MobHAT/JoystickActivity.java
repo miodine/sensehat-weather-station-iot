@@ -27,6 +27,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class JoystickActivity extends AppCompatActivity {
+    TextView textViewError;
 int Joystick_x, Joystick_y, Joystick_c;
     int sampleTime =DATA.DEFAULT_SAMPLE_TIME;
     String ipAddress =DATA.DEFAULT_IP_ADDRESS;
@@ -59,7 +60,8 @@ int Joystick_x, Joystick_y, Joystick_c;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joystick);
-
+        textViewError = findViewById(R.id.textViewErrorMsg);
+        textViewError.setText("");
         // get the Intent that started this Activity
         Intent intent = getIntent();
 
@@ -126,19 +128,19 @@ int Joystick_x, Joystick_y, Joystick_c;
     private void errorHandling(int errorCode) {
         switch(errorCode) {
             case DATA.ERROR_TIME_STAMP:
-                //textViewError.setText("ERR #1");
+                textViewError.setText("ERR #1");
                 Log.d("errorHandling", "Request time stamp error.");
                 break;
             case DATA.ERROR_NAN_DATA:
-                //textViewError.setText("ERR #2");
+                textViewError.setText("ERR #2");
                 Log.d("errorHandling", "Invalid JSON data.");
                 break;
             case DATA.ERROR_RESPONSE:
-                //textViewError.setText("ERR #3");
+                textViewError.setText("ERR #3");
                 Log.d("errorHandling", "GET request VolleyError.");
                 break;
             default:
-                //textViewError.setText("ERR ??");
+                textViewError.setText("ERR ??");
                 Log.d("errorHandling", "Unknown error.");
                 break;
         }

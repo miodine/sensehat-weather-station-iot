@@ -348,6 +348,7 @@ public class LedMatrixActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        ConnectTextView.setText("Connected to: "+getURL(ipAddress));
                         Log.d("Response", response);
                     }
                 },
@@ -357,8 +358,11 @@ public class LedMatrixActivity extends AppCompatActivity {
                         String msg = error.getMessage();
                         if( msg != null) {
                             Log.d("Error.Response", msg);
+                            ConnectTextView.setText("Failed to Connect");
                         } else {
+
                             Log.d("Error.Response", "UNKNOWN");
+                            ConnectTextView.setText("Failed to Connect");
                             // error type specific code
                         }
                     }

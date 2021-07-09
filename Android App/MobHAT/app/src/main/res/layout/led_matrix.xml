@@ -20,6 +20,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="LED"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="serif"
+            android:textColor="@color/blue"
+            android:textSize="25sp"></TextView>
         <TableLayout
             android:id="@+id/ledTableLayout"
             android:layout_width="match_parent"
@@ -1025,7 +1036,7 @@
             android:id="@+id/LedConnectTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Connecting to:"
+            android:text="Connected to:"
             android:textColor="@color/Black"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

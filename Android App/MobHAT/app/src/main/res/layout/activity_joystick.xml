@@ -12,20 +12,31 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+
+        <TextView
+            android:id="@+id/textViewErrorMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ERROR"
+            android:layout_gravity="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:gravity="center"
             android:text="Joystick"
-            android:textSize="18sp"
-            android:textColor="@color/Black"/>
+            android:textSize="20sp"
+            android:fontFamily="serif"
+            android:textColor="@color/blue"/>
 
         <com.jjoe64.graphview.GraphView
             android:id="@+id/dataGraph_joystick"

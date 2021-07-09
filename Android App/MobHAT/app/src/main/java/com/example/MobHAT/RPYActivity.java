@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -30,7 +31,7 @@ public class RPYActivity extends AppCompatActivity {
     int sampleTime =DATA.DEFAULT_SAMPLE_TIME;
     String ipAddress =DATA.DEFAULT_IP_ADDRESS;
     int sampleQuantity =DATA.DEFAULT_SAMPLE_QUANTITY;
-
+    TextView textViewError;
 
     /* Graph1 */
     private GraphView dataGraph1;
@@ -76,7 +77,8 @@ public class RPYActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rpy);
-
+        textViewError = findViewById(R.id.textViewErrorMsg);
+        textViewError.setText("");
         // get the Intent that started this Activity
         Intent intent = getIntent();
 
@@ -176,19 +178,19 @@ public class RPYActivity extends AppCompatActivity {
     private void errorHandling(int errorCode) {
         switch(errorCode) {
             case DATA.ERROR_TIME_STAMP:
-                //textViewError.setText("ERR #1");
+                textViewError.setText("ERR #1");
                 Log.d("errorHandling", "Request time stamp error.");
                 break;
             case DATA.ERROR_NAN_DATA:
-                //textViewError.setText("ERR #2");
+                textViewError.setText("ERR #2");
                 Log.d("errorHandling", "Invalid JSON data.");
                 break;
             case DATA.ERROR_RESPONSE:
-                //textViewError.setText("ERR #3");
+                textViewError.setText("ERR #3");
                 Log.d("errorHandling", "GET request VolleyError.");
                 break;
             default:
-                //textViewError.setText("ERR ??");
+                textViewError.setText("ERR ??");
                 Log.d("errorHandling", "Unknown error.");
                 break;
         }

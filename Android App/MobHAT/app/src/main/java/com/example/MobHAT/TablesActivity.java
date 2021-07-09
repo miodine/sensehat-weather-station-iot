@@ -31,6 +31,7 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 public class TablesActivity extends AppCompatActivity {
+    TextView textViewError;
     double Temperature, Pressure, Humidity;
     TextView Readings_TempC;
     TextView Readings_TempF;
@@ -100,7 +101,8 @@ public class TablesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tables);
-
+        textViewError = findViewById(R.id.textViewErrorMsg);
+        textViewError.setText("");
 
 
         // get the Intent that started this Activity
@@ -269,19 +271,19 @@ public class TablesActivity extends AppCompatActivity {
     private void errorHandling(int errorCode) {
         switch(errorCode) {
             case DATA.ERROR_TIME_STAMP:
-                //textViewError.setText("ERR #1");
+                textViewError.setText("ERR #1");
                 Log.d("errorHandling", "Request time stamp error.");
                 break;
             case DATA.ERROR_NAN_DATA:
-                //textViewError.setText("ERR #2");
+                textViewError.setText("ERR #2");
                 Log.d("errorHandling", "Invalid JSON data.");
                 break;
             case DATA.ERROR_RESPONSE:
-                //textViewError.setText("ERR #3");
+                textViewError.setText("ERR #3");
                 Log.d("errorHandling", "GET request VolleyError.");
                 break;
             default:
-                //textViewError.setText("ERR ??");
+                textViewError.setText("ERR ??");
                 Log.d("errorHandling", "Unknown error.");
                 break;
         }
