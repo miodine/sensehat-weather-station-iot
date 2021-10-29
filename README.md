@@ -23,3 +23,5 @@ whose specifics are listed in the following subsections, whereas the overall str
 
 
 
+![IoT_sys_overview](https://user-images.githubusercontent.com/48156138/139454604-2bfa58ab-f005-456e-a672-731adfc9689f.png)
+
