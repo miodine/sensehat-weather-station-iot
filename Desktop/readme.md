@@ -9,6 +9,7 @@ Desktop application for the IoT system project. Designed in MVVM archtecture par
  4. __LED Matrix Control__: enables setting a chosen colour on an LED matrix and sending the settings to the LED matrix of the server.
 
 |   <img src="img\desk1.png" alt="Desktop App Settings" style="width:440px;" />  |   <img src="img\desk2.png" alt="Desktop App Data List" style="width:440px;" />|
+
 |   <img src="img\desk3.png" alt="Desktop App Chart" style="width:440px;"/>  |   <img src="img\desk4.png" alt="Desktop App LED Matrix" style="width:440px;" /> |
 
 
